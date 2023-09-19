@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+    {{ form.hidden_tag() }}
+    <h1>{{ song.title }}!</h1>
+    <p class="lead">&ndash; {{ song.artist }}</p>
+</div>
+
+<ul>
+    {% for playlist in song.playlists %}
+    <li>{{ playlist.name }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
